@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -24,13 +24,31 @@
         .container {
             background: white;
             border-radius: 16px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-            max-width: 800px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            max-width: 700px;
             width: 100%;
             padding: 3rem;
         }
 
-        h1 {
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 2rem;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #667eea;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .header-text h1 {
             font-size: 2.5rem;
             color: #1a202c;
             margin-bottom: 0.5rem;
@@ -38,39 +56,56 @@
         }
 
         .subtitle {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: #4a5568;
-            margin-bottom: 2rem;
             font-weight: 400;
         }
 
-        .section {
-            margin-bottom: 2rem;
+        .about {
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            color: #434954;
+            font-size: 1rem;
+        }
+
+        .about p {
+            margin-bottom: 1rem;
         }
 
         .section-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #2d3748;
             font-weight: 600;
             margin-bottom: 1rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            border-left: 4px solid #667eea;
+            padding-left: 0.75rem;
         }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
+            margin-bottom: 1.5rem;
         }
 
         .tech-item {
             background: linear-gradient(135deg, #f6f8fa 0%, #eaeef2 100%);
             color: #24292e;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
             font-weight: 500;
             border: 1px solid #d0d7de;
+            transition: all 0.2s ease;
+        }
+
+        .tech-item:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
         }
 
         .tech-category {
@@ -86,25 +121,44 @@
             font-weight: 600;
         }
 
+        .highlight {
+            background: linear-gradient(135deg, #f6f8fa 0%, #eaeef2 100%);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 2rem;
+                padding: 1.5rem;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
             }
 
             h1 {
                 font-size: 2rem;
-            }
-
-            .tech-stack {
-                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>MrBolas</h1>
-        <p class="subtitle">Senior Software Engineer | Barreiro, Portugal</p>
+        <div class="header">
+            <img src="https://github.com/MrBolas.png" alt="MrBolas" class="avatar">
+            <div class="header-text">
+                <h1>MrBolas</h1>
+                <p class="subtitle">Senior Software Engineer | Barreiro, Portugal</p>
+            </div>
+        </div>
+
+        <div class="about">
+            <p>Master Engineer in Telecommunications and Electronics with a passion for building intelligent systems. I specialize in <span class="highlight">AI agent development</span>, LLM operations, and creating robust infrastructure that scales.</p>
+            
+            <p>My work focuses on the intersection of artificial intelligence and practical engineering—whether it's developing autonomous agents, optimizing model deployment, or building homelab systems that push the boundaries of what's possible.</p>
+        </div>
 
         <div class="section">
             <div class="section-title">Core Technologies</div>
@@ -130,17 +184,18 @@
         </div>
 
         <div class="section tech-category">
-            <div class="tech-category-title">Frameworks & Libraries</div>
+            <div class="tech-category-title">AI & Agent Development</div>
             <div class="tech-stack">
                 <span class="tech-item">LangChain</span>
-                <span class="tech-item">Angular</span>
+                <span class="tech-item">LLM Operations</span>
+                <span class="tech-item">Autonomous Agents</span>
             </div>
         </div>
 
         <div class="section tech-category">
-            <div class="tech-category-title">Specializations</div>
+            <div class="tech-category-title">Frameworks & Specializations</div>
             <div class="tech-stack">
-                <span class="tech-item">LLM Operations</span>
+                <span class="tech-item">Angular</span>
                 <span class="tech-item">Homelab Systems</span>
                 <span class="tech-item">IoT Development</span>
             </div>
