@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrBolas - Senior Software Engineer</title>
+    <title>MrBolas - Master Engineer</title>
     <style>
         * {
             margin: 0;
@@ -12,128 +12,102 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 2rem;
         }
 
         .container {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-            max-width: 700px;
-            width: 100%;
-            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .header {
+        header {
             display: flex;
             align-items: center;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-            border-bottom: 2px solid #eaecef;
-            padding-bottom: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .avatar {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 4px solid #667eea;
-            object-fit: cover;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 3px solid #4cc9f0;
+            box-shadow: 0 8px 24px rgba(76, 201, 240, 0.3);
         }
 
-        .header-text h1 {
+        h1 {
             font-size: 2.5rem;
-            color: #1a202c;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
+            background: linear-gradient(90deg, #4cc9f0, #4361ee, #f72585);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
+            color: #a8dadc;
             font-size: 1.1rem;
-            color: #4a5568;
-            font-weight: 400;
+            margin-top: 0.25rem;
         }
 
-        .about {
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-            color: #434954;
-            font-size: 1rem;
-        }
-
-        .about p {
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: 1rem;
-            color: #2d3748;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-left: 4px solid #667eea;
-            padding-left: 0.75rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
             margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: #4cc9f0;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
         }
 
         .tech-item {
-            background: linear-gradient(135deg, #f6f8fa 0%, #eaeef2 100%);
-            color: #24292e;
-            padding: 0.6rem 1.2rem;
+            background: rgba(76, 201, 240, 0.1);
+            padding: 0.75rem 1rem;
             border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border: 1px solid #d0d7de;
-            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
         }
 
         .tech-item:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+            background: rgba(76, 201, 240, 0.2);
+            transform: translateX(5px);
         }
 
-        .tech-category {
-            margin-top: 2rem;
+        .tech-icon {
+            font-size: 1.2rem;
         }
 
-        .tech-category-title {
-            font-size: 0.85rem;
-            color: #6a737d;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
+        .tech-name {
+            color: #ffffff;
+            font-weight: 500;
         }
 
-        .highlight {
-            background: linear-gradient(135deg, #f6f8fa 0%, #eaeef2 100%);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1.5rem;
-            }
-
-            .header {
+        @media (max-width: 600px) {
+            header {
                 flex-direction: column;
                 text-align: center;
             }
@@ -141,65 +115,71 @@
             h1 {
                 font-size: 2rem;
             }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="avatar.png" alt="MrBolas" class="avatar">
-            <div class="header-text">
+        <header>
+            <img src="avatar.png" alt="MrBolas Avatar" class="avatar">
+            <div>
                 <h1>MrBolas</h1>
-                <p class="subtitle">Senior Software Engineer | Barreiro, Portugal</p>
+                <p class="subtitle">Master Engineer passionate about AI & Agents</p>
             </div>
-        </div>
+        </header>
 
-        <div class="about">
-            <p>Master Engineer in Telecommunications and Electronics with a passion for building intelligent systems. I specialize in <span class="highlight">AI agent development</span>, LLM operations, and creating robust infrastructure that scales.</p>
-            
-            <p>My work focuses on the intersection of artificial intelligence and practical engineering—whether it's developing autonomous agents, optimizing model deployment, or building homelab systems that push the boundaries of what's possible.</p>
-        </div>
+        <section class="section">
+            <h2>About</h2>
+            <p>Senior Software Engineer with a Master's degree in Engineering, dedicated to building intelligent systems that learn and adapt. I specialize in creating autonomous agents and conversational AI that can understand context, reason through problems, and interact naturally with users.</p>
+        </section>
 
-        <div class="section">
-            <div class="section-title">Core Technologies</div>
-            <div class="tech-stack">
-                <span class="tech-item">Go</span>
-                <span class="tech-item">TypeScript</span>
-                <span class="tech-item">JavaScript</span>
-                <span class="tech-item">Python</span>
-                <span class="tech-item">Java</span>
-                <span class="tech-item">C++</span>
-                <span class="tech-item">C</span>
+        <section class="section">
+            <h2>Core Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><span class="tech-icon">🐍</span><span class="tech-name">Python</span></div>
+                <div class="tech-item"><span class="tech-icon">🦀</span><span class="tech-name">Go</span></div>
+                <div class="tech-item"><span class="tech-icon">⚡</span><span class="tech-name">JavaScript/TypeScript</span></div>
+                <div class="tech-item"><span class="tech-icon">☕</span><span class="tech-name">Java</span></div>
+                <div class="tech-item"><span class="tech-icon">🖥️</span><span class="tech-name">C/C++</span></div>
             </div>
-        </div>
+        </section>
 
-        <div class="section tech-category">
-            <div class="tech-category-title">Infrastructure & Tools</div>
-            <div class="tech-stack">
-                <span class="tech-item">TrueNAS</span>
-                <span class="tech-item">Raspberry Pi</span>
-                <span class="tech-item">Orange Pi</span>
-                <span class="tech-item">GitHub Actions</span>
+        <section class="section">
+            <h2>Infrastructure & Tools</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><span class="tech-icon">🐳</span><span class="tech-name">Docker</span></div>
+                <div class="tech-item"><span class="tech-icon">☸️</span><span class="tech-name">Kubernetes</span></div>
+                <div class="tech-item"><span class="tech-icon">🔧</span><span class="tech-name">TrueNAS</span></div>
+                <div class="tech-item"><span class="tech-icon">☁️</span><span class="tech-name">AWS/GCP</span></div>
+                <div class="tech-item"><span class="tech-icon">📊</span><span class="tech-name">Prometheus/Grafana</span></div>
             </div>
-        </div>
+        </section>
 
-        <div class="section tech-category">
-            <div class="tech-category-title">AI & Agent Development</div>
-            <div class="tech-stack">
-                <span class="tech-item">LangChain</span>
-                <span class="tech-item">LLM Operations</span>
-                <span class="tech-item">Autonomous Agents</span>
+        <section class="section">
+            <h2>AI & Agent Development</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><span class="tech-icon">🤖</span><span class="tech-name">LangChain</span></div>
+                <div class="tech-item"><span class="tech-icon">🧠</span><span class="tech-name">LLM Operations</span></div>
+                <div class="tech-item"><span class="tech-icon">🤝</span><span class="tech-name">Autonomous Agents</span></div>
+                <div class="tech-item"><span class="tech-icon">🎯</span><span class="tech-name">RAG Systems</span></div>
+                <div class="tech-item"><span class="tech-icon">🔍</span><span class="tech-name">Context-Aware AI</span></div>
             </div>
-        </div>
+        </section>
 
-        <div class="section tech-category">
-            <div class="tech-category-title">Frameworks & Specializations</div>
-            <div class="tech-stack">
-                <span class="tech-item">Angular</span>
-                <span class="tech-item">Homelab Systems</span>
-                <span class="tech-item">IoT Development</span>
+        <section class="section">
+            <h2>Frameworks & Specializations</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><span class="tech-icon">⚛️</span><span class="tech-name">React/Vue.js</span></div>
+                <div class="tech-item"><span class="tech-icon">🍃</span><span class="tech-name">Spring Boot</span></div>
+                <div class="tech-item"><span class="tech-icon">📝</span><span class="tech-name">System Design</span></div>
+                <div class="tech-item"><span class="tech-icon">🔐</span><span class="tech-name">Security & Privacy</span></div>
+                <div class="tech-item"><span class="tech-icon">⚙️</span><span class="tech-name">DevOps Practices</span></div>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 </html>
