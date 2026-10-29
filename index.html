@@ -3,138 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrBolas - Software Engineer</title>
+    <title>João André Bolas Soares — Senior Software Engineer</title>
+    <meta name="description" content="Senior software engineer in Barreiro, Portugal. Nine years building Go and TypeScript backends, microservices, CI/CD platforms and AI agentic workflows.">
+    <link rel="canonical" href="https://mrbolas.github.io/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="João André Bolas Soares — Senior Software Engineer">
+    <meta property="og:description" content="Backend systems in Go and TypeScript, microservices, CI/CD platforms and AI agentic workflows.">
+    <meta property="og:url" content="https://mrbolas.github.io/">
+    <meta property="og:image" content="https://mrbolas.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="João André Bolas Soares — Senior Software Engineer">
+    <meta name="twitter:description" content="Backend systems in Go and TypeScript, microservices, CI/CD platforms and AI agentic workflows.">
+    <meta name="twitter:image" content="https://mrbolas.github.io/og-image.png">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #26282c;
+            background: linear-gradient(135deg, #5b68d4 0%, #764ba2 100%);
             min-height: 100vh;
         }
-        
+
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 48px 20px;
         }
-        
+
         header {
             text-align: center;
-            color: white;
-            margin-bottom: 60px;
+            color: #fff;
+            margin-bottom: 40px;
         }
-        
+
         h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 2.6rem;
+            line-height: 1.2;
+            margin-bottom: 8px;
         }
-        
+
         .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.15rem;
+            opacity: 0.95;
+            margin-bottom: 14px;
         }
-        
+
+        .contact {
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 10px;
+        }
+
+        .contact a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .contact a:hover {
+            text-decoration-thickness: 2px;
+        }
+
         section {
-            background: white;
+            background: #fff;
             border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 28px 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
+            color: #4c3b8f;
+            font-size: 1.3rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e4e0f5;
         }
-        
-        .project-list {
-            list-style: none;
+
+        p {
+            margin-bottom: 12px;
         }
-        
-        .project-item {
-            padding: 15px;
-            border-left: 3px solid #667eea;
-            margin-bottom: 15px;
-            background: #f8f9fa;
-            border-radius: 0 8px 8px 0;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-        
-        .project-title {
-            font-weight: bold;
-            color: #333;
+
+        a {
+            color: #4c3b8f;
+        }
+
+        .entry {
+            margin-bottom: 22px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 4px 16px;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            color: #26282c;
+        }
+
+        .dates {
+            font-size: 0.88rem;
+            color: #5a5f68;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .company {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #4c3b8f;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 0.94rem;
             margin-bottom: 5px;
         }
-        
-        .project-desc {
-            color: #666;
-            font-size: 0.9rem;
+
+        li:last-child {
+            margin-bottom: 0;
         }
-        
+
+        .stack-group {
+            font-size: 0.92rem;
+            margin-bottom: 8px;
+        }
+
+        .stack-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .stack-label {
+            font-weight: 600;
+            color: #26282c;
+        }
+
         footer {
             text-align: center;
-            color: white;
-            opacity: 0.8;
-            margin-top: 40px;
+            color: #fff;
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-top: 32px;
         }
-        
+
+        footer a {
+            color: #fff;
+        }
+
         @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .container { padding: 20px 15px; }
-            section { padding: 20px; }
+            .container { padding: 28px 14px; }
+            h1 { font-size: 1.9rem; }
+            .subtitle { font-size: 1rem; }
+            .contact span { display: none; }
+            .contact { gap: 2px 16px; }
+            section { padding: 20px 18px; border-radius: 10px; }
+            .dates { white-space: normal; }
+        }
+
+        @media print {
+            @page {
+                margin: 11mm 12mm;
+            }
+
+            body {
+                background: #fff;
+                color: #000;
+                font-size: 9.2pt;
+                line-height: 1.34;
+            }
+
+            .container {
+                max-width: none;
+                padding: 0;
+            }
+
+            header {
+                color: #000;
+                text-align: left;
+                margin-bottom: 12px;
+            }
+
+            h1 { font-size: 17pt; line-height: 1.1; }
+            .subtitle { font-size: 10pt; opacity: 1; margin-bottom: 5px; }
+            .contact { justify-content: flex-start; }
+            .contact a { color: #000; }
+            .contact span { display: none; }
+
+            section {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+                margin-bottom: 9px;
+                break-inside: auto;
+            }
+
+            h2 {
+                color: #000;
+                font-size: 9.5pt;
+                border-bottom: 1px solid #000;
+                margin-bottom: 5px;
+                padding-bottom: 2px;
+                break-after: avoid;
+            }
+
+            p { margin-bottom: 4px; }
+
+            .entry {
+                margin-bottom: 9px;
+                break-inside: avoid;
+            }
+
+            .company { color: #000; margin-bottom: 2px; }
+            h3 { font-size: 9.6pt; }
+            .dates { font-size: 8.6pt; white-space: nowrap; }
+            ul { padding-left: 15px; }
+            li { font-size: 9.2pt; margin-bottom: 1px; }
+            .stack-group { font-size: 9.2pt; margin-bottom: 2px; }
+
+            a { color: #000; text-decoration: none; }
+
+            a[href^="http"]::after {
+                content: " (" attr(href) ")";
+                font-size: 0.82em;
+                word-break: break-all;
+            }
+
+            footer { display: none; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <header>
-            <h1>MrBolas 👨‍💻</h1>
-            <p class="subtitle">Senior Software Engineer | Barreiro, Portugal</p>
+            <h1>João André Bolas Soares</h1>
+            <p class="subtitle">Senior Software Engineer · Barreiro, Portugal</p>
+            <p class="contact">
+                <a href="mailto:jbolasoares21@gmail.com">jbolasoares21@gmail.com</a>
+                <span aria-hidden="true">·</span>
+                <a href="https://www.linkedin.com/in/jbsoares21">LinkedIn</a>
+                <span aria-hidden="true">·</span>
+                <a href="https://github.com/MrBolas">GitHub</a>
+            </p>
         </header>
 
-        <section>
-            <h2>👋 About Me</h2>
-            <p>Senior Software Engineer with expertise in backend development, system design, and full-stack applications. Passionate about building scalable solutions and exploring new technologies.</p>
+        <section aria-labelledby="summary">
+            <h2 id="summary">Summary</h2>
+            <p>Senior software engineer with nine years building backend systems. I work mostly in Go and
+                TypeScript across microservice architectures: REST and gRPC APIs behind BFFs, data
+                persistence, CI/CD platforms, and the observability that makes them debuggable. Recent
+                focus on agentic AI workflows and developer tooling.</p>
         </section>
 
-        <section>
-            <h2>💻 Featured Projects</h2>
-            <ul class="project-list">
-                <li class="project-item">
-                    <div class="project-title">agent-toolkit</div>
-                    <div class="project-desc">TypeScript toolkit for building AI agents</div>
-                </li>
-                <li class="project-item">
-                    <div class="project-title">langchain-playground</div>
-                    <div class="project-desc">Go-based playground for experimenting with LangChain</div>
-                </li>
-                <li class="project-item">
-                    <div class="project-title">homelab-display</div>
-                    <div class="project-desc">JavaScript dashboard for monitoring homelab infrastructure</div>
-                </li>
-                <li class="project-item">
-                    <div class="project-title">Investment_app</div>
-                    <div class="project-desc">Angular application for tracking investments and portfolio management</div>
-                </li>
-            </ul>
+        <section aria-labelledby="experience">
+            <h2 id="experience">Experience</h2>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Senior Software Engineer</h3>
+                    <span class="dates">Sep 2022 – Present</span>
+                </div>
+                <p class="company">SWORD Health</p>
+                <ul>
+                    <li>Build and maintain backend systems in a microservice architecture serving web, iOS
+                        and Android clients through BFFs over REST and gRPC.</li>
+                    <li>Primary stack: Go (Gin, Gorm) and Node.js (Express, Knex), with MySQL and
+                        PostgreSQL.</li>
+                    <li>Engineered CI/CD pipelines on Google Kubernetes Engine with Jenkins and a custom
+                        internal platform, giving visibility and control over deployments across dozens of
+                        services.</li>
+                    <li>Designed and implemented a company-wide audit service for regulatory compliance and
+                        external audits, with end-to-end traceability of critical user actions and system
+                        events.</li>
+                    <li>Led the definition and adoption of a company-wide RFC process for JWT secret
+                        rotation, standardising security practice and removing manual intervention across
+                        all services.</li>
+                    <li>Built and deployed agentic workflows with LangChain, LangGraph and Mastra.ai, with
+                        Langfuse observability into agent interactions; developed AI-powered developer
+                        tooling (e.g. OpenCode) for spec-driven development.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Software Engineer</h3>
+                    <span class="dates">Jun 2021 – Sep 2022</span>
+                </div>
+                <p class="company">Truphone</p>
+                <ul>
+                    <li>Backend APIs in a microservices architecture using REST and the OpenAPI 3
+                        specification.</li>
+                    <li>Multi-stack delivery: Java 11 (Spring, Maven, JUnit 5, Cucumber) and Go (Echo v4,
+                        Gorm) over SQL databases.</li>
+                    <li>Deployments to AWS (EKS) via GitLab CI multi-stage pipelines; Docker and
+                        Kubernetes.</li>
+                    <li>Service monitoring with Prometheus, Grafana and Graylog; K6 load tests on
+                        business-critical workflows.</li>
+                    <li>Test-driven development across unit tests, service E2E tests and network-level E2E
+                        tests.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Software Engineer</h3>
+                    <span class="dates">Nov 2019 – Jun 2021</span>
+                </div>
+                <p class="company">Infinera</p>
+                <ul>
+                    <li>Development and integration of modular, data-driven Angular 9 components using
+                        object-oriented programming and modern web concepts; API routes with NestJS.</li>
+                    <li>Test-driven development with high coverage in Jasmine and Karma, plus Protractor for
+                        E2E testing.</li>
+                    <li>CI/CD with pre-commit automation (TSLint, Stylelint, Prettier) and Jenkins build
+                        validation wired to SonarQube and PMD.</li>
+                    <li>C++ development with Google Test, including mathematical optical models, UI/UX and
+                        data management.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>System Engineer</h3>
+                    <span class="dates">Apr 2017 – Nov 2019</span>
+                </div>
+                <p class="company">Siemens</p>
+                <ul>
+                    <li>High-level requirement specification architecture with full traceability from
+                        contract to implementation for critical systems, including ERTMS.</li>
+                    <li>Designed testing requirements across several degrees of testing.</li>
+                    <li>Requirements design for railway signalling engineering projects.</li>
+                </ul>
+            </article>
         </section>
 
-        <section>
-            <h2>🔧 Tech Stack</h2>
-            <p>Go, TypeScript, JavaScript, Python, Java, C++, C | Angular, Node.js | Raspberry Pi, TrueNAS, Cloud Infrastructure</p>
+        <!-- Projects section: intentionally omitted. Add it back once there are public repos
+             worth featuring; the previous entry (agent-toolkit) is private. -->
+
+        <section aria-labelledby="stack">
+            <h2 id="stack">Tech Stack</h2>
+            <p class="stack-group"><span class="stack-label">Languages:</span> Go, TypeScript, JavaScript,
+                Java, Python, C++, C</p>
+            <p class="stack-group"><span class="stack-label">Backend:</span> Gin, Gorm, Echo, NestJS,
+                Express, Spring</p>
+            <p class="stack-group"><span class="stack-label">Frontend:</span> Angular, Node.js</p>
+            <p class="stack-group"><span class="stack-label">Data:</span> PostgreSQL, MySQL</p>
+            <p class="stack-group"><span class="stack-label">Infrastructure:</span> Docker, Kubernetes
+                (GKE, EKS), k3s, AWS, Jenkins, GitLab CI</p>
+            <p class="stack-group"><span class="stack-label">Observability &amp; testing:</span> Prometheus,
+                Grafana, Graylog, Langfuse, LangChain, LangGraph, Mastra, K6, JUnit, Cucumber, Jasmine,
+                Karma</p>
+        </section>
+
+        <section aria-labelledby="education">
+            <h2 id="education">Education</h2>
+            <article class="entry">
+                <div class="entry-head">
+                    <h3>Master's degree, Electronics and Telecommunications Engineering</h3>
+                    <span class="dates">2009 – 2015</span>
+                </div>
+                <p class="company">University of Algarve</p>
+                <p>Thesis: <em>Photovoltaic Power Forecast Modeling with Artificial Neural Networks</em> —
+                    artificial neural networks, genetic algorithms, MATLAB and renewable energy.</p>
+            </article>
+        </section>
+
+        <section aria-labelledby="languages">
+            <h2 id="languages">Languages</h2>
+            <p>Portuguese (C2) · English (C1) · Spanish (B1)</p>
         </section>
 
         <footer>
-            <p>© 2026 MrBolas | Built with ❤️ using GitHub Pages</p>
+            <p>© 2026 João André Bolas Soares · <a href="https://github.com/MrBolas/mrbolas.github.io">Source</a></p>
         </footer>
-    </div>
+    </main>
 </body>
 </html>
